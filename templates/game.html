@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+
+
+{% block head %}
+    <script src="{{ url_for('static', filename='js/game.js') }}" defer></script>
+{% endblock %}
+
+
+{% block content %}
+    {% include 'index.html' %}
+    <div id="game-board"  data-card-num="{{ card_num }}">
+        {% for card in range(card_num*2) %}
+            <div class="game-cell"
+                 data-coordinate-card="{{ card }}">
+                 <span style="font-size: 3em; color: #44b3ca;">
+                    <i class="fas fa-american-sign-language-interpreting"></i>
+                 </span>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
+
+

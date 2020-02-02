@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    <form action="/game" method="GET">
+        <label for="selection">How many different cards would you like to play with?</label>
+        <div class="row">
+            <div class="col-4 col-md-2 col-lg-1">
+                <label>Number:</label>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-4 col-md-2 col-lg-1">
+                <select class="form-control" name="card-num">
+                    {% for num in range(2, 21) %}
+                        <option value="{{ num }}">{{ num }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            </div>
+        </div>
+        <button class="btn-outline-dark" type="submit">Let's go!</button>
+    </form>
+{% endblock %}

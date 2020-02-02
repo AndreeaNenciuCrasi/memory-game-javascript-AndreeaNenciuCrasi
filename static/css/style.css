@@ -1,0 +1,30 @@
+body {
+    padding: 20px 20px;
+    font-family: 'Acme', sans-serif;
+    color: black;
+
+}
+
+.game-cell {
+    background-color: #27464d;
+    cursor: pointer;
+    border: 1px solid black;
+    display: inline-block;
+    width: 200px;
+    height: 150px;
+    font-size: 35px;
+    text-align: center;
+    vertical-align: center;
+    margin: 3px;
+    color: grey;
+}
+
+.selected{
+    background-color: red;
+}
+
+game-board{
+    margin:0;
+    padding:0;
+}
+
